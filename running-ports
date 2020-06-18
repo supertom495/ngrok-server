@@ -1,0 +1,59 @@
+home.xiyantong.xyz				x
+	http:		9000			x
+	https:		9001			x
+	tunnelAddr:	9002			x
+
+office.xiyantong.xyz				x
+        http:           9003			x
+        https:          9004			x
+        tunnelAddr:     9005			x
+
+api.xiyantong.xyz				x
+	httP:		9012			x
+	tunnelAddr:	9013			x
+
+demo.xiyantong.xyz and roben.xiyantong.xyz :	x
+	9006:9011				x
+
+api.xiyantong.pw
+	http:		9014
+	tunnelAddr:	9015
+
+
+office.xiyantong.pw
+        http:           9016
+        tunnelAddr:     9017
+
+mtoffice.xiyantong.pw
+	http:		9018
+	tunnelAddr:	9019
+
+home.xiyantong.pw
+	http:		9020
+	https:		9021
+	tunnelAddr:	9022
+
+nhocafe.api.redpayments.com.au
+	http:		9023
+	tunnelAddr:	9024
+
+test.xiyantong.pw
+	http:		9025
+	tunnelAddr:	9026
+
+harry.xiyantong.pw
+	http:		9027
+	tunnelAddr:	9028
+
+hotpotpalace.api.redpayments.com.au
+	http:		9029
+	tunnelAddr:	9030
+
+hkyuebaby.api.redpayments.com.au
+	http:		9031
+	tunnelAddr:	9032
+
+jiaojiaoxiaoyu.api.redpayments.com.au
+	http:		9033
+	tunnelAddr:	9034
+
