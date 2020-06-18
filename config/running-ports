@@ -57,3 +57,7 @@ jiaojiaoxiaoyu.api.redpayments.com.au
 	http:		9033
 	tunnelAddr:	9034
 
+dolarshopsydney.api.redpayments.com.au
+	http:		9035
+	tunnelAddr:	9036
+
