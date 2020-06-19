@@ -58,6 +58,7 @@ func genRootCA() {
 	stdout, err := cmd.Output()
 	if err != nil {
 		log.Fatal(err)
+		fmt.Print("genRootCA")
 		return
 	}
 	fmt.Print(string(stdout))
@@ -74,6 +75,7 @@ func genDevice() {
 	stdout, err := cmd.Output()
 	if err != nil {
 		log.Fatal(err)
+		fmt.Print("genDevice")
 		return
 	}
 	fmt.Print(string(stdout))
@@ -99,6 +101,7 @@ func reqRootCA() {
 	stdout, err := cmd.Output()
 	if err != nil {
 		log.Fatal(err)
+		fmt.Print("reqRootCA")
 		return
 	}
 	fmt.Print(string(stdout))
@@ -120,6 +123,7 @@ func reqDevice() {
 	stdout, err := cmd.Output()
 	if err != nil {
 		log.Fatal(err)
+		fmt.Print("reqDevice")
 		return
 	}
 	fmt.Print(string(stdout))
@@ -146,6 +150,7 @@ func reqCrt() {
 	stdout, err := cmd.Output()
 	if err != nil {
 		log.Fatal(err)
+		fmt.Print("reqCrt")
 		return
 	}
 	fmt.Print(string(stdout))
