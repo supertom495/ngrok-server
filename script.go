@@ -13,7 +13,7 @@ const TUNNEL_ADDR_PORT = "9036"
 
 func main() {
 	fmt.Println(NGROK_DOMAIN, HTTP_PORT, TUNNEL_ADDR_PORT)
-	var path = "certificate\\" + NGROK_DOMAIN
+	var path = "certificate/" + NGROK_DOMAIN
 	_, err := os.Stat(path)
 
 	// creating certificate directory
