@@ -53,7 +53,13 @@ func main() {
 	dockerfile += fmt.Sprintf("EXPOSE %s\n", HTTP_PORT)
 	dockerfile += fmt.Sprintf("EXPOSE %s\n\n", TUNNEL_ADDR_PORT)
 	// dockerfile += fmt.Sprintf("CMD [\"/usr/local/bin/ngrokd\"]")
-	dockerfile += fmt.Sprintf("CMD [\"/bin/bash\"]")
+	dockerfile += fmt.Sprintf("CMD [\"-tlsKey=/root/certificate/device.key\", ")
+	dockerfile += fmt.Sprintf("\"-tlsCrt=/root/certificate/device.crt\", ")
+	dockerfile += fmt.Sprintf("\"-domain=\"$NGROK_DOMAIN\"\", ")
+	dockerfile += fmt.Sprintf("\"-httpAddr=\":$HTTP_PORT\"\", ")
+	dockerfile += fmt.Sprintf("\"-httpsAddr=\":\"\", ")
+	dockerfile += fmt.Sprintf("\"-tunnelAddr=\":$TUNNEL_ADDR_PORT\"\"] \n\n")
+	dockerfile += fmt.Sprintf("ENTRYPOINT [\"/usr/local/bin/ngrokd\"]")
 
 	err = ioutil.WriteFile("Dockerfile", []byte(dockerfile), 0755)
 	if err != nil {
