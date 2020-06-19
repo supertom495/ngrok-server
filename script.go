@@ -3,12 +3,13 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"os"
 	"os/exec"
 )
 
-const NGROK_DOMAIN = "123444"
+const NGROK_DOMAIN = "www.google.com"
 const HTTP_PORT = "9035"
 const TUNNEL_ADDR_PORT = "9036"
 
@@ -35,8 +36,27 @@ func main() {
 	}
 	fmt.Println(certificatePath) // for example /home/user
 
-	// creating certificate files using cmd
+	// generate certificate files using cmd
 	generateCertificate()
+
+	// generate Dockerfile
+	os.Chdir("./../../")
+
+	var dockerfile = ""
+	dockerfile += "FROM ubuntu:18.04\n\n"
+	dockerfile += "LABEL maintainer=\"supertom495@gmail.com\"\n\n"
+	dockerfile += "COPY ./ngrok/bin/ngrokd /usr/local/bin\n\n"
+	dockerfile += fmt.Sprintf("COPY ./certificate/%s /root/certificate\n\n", NGROK_DOMAIN)
+	dockerfile += fmt.Sprintf("EXPOSE %s\n\n", HTTP_PORT)
+	dockerfile += fmt.Sprintf("EXPOSE %s\n\n", TUNNEL_ADDR_PORT)
+	dockerfile += fmt.Sprintf("CMD [\"/usr/local/bin/ngrokd\"]")
+
+	err = ioutil.WriteFile("Dockerfile", []byte(dockerfile), 0755)
+	if err != nil {
+		fmt.Printf("Unable to write file: %v", err)
+	}
+
+	// update ngrok.conf
 
 }
 
