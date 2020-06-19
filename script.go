@@ -94,7 +94,7 @@ func reqRootCA() {
 	arg6 := "-subj"
 	arg7 := "/CN=" + NGROK_DOMAIN
 	arg8 := "-days"
-	arg9 := "5000 "
+	arg9 := "5000"
 	arg10 := "-out"
 	arg11 := "rootCA.pem"
 
