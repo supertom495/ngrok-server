@@ -1,5 +1,7 @@
 FROM ubuntu:18.04
 
+LABEL maintainer="supertom495@gmail.com"
+
 RUN echo "hello world"
 
 
@@ -11,6 +13,5 @@ ENV TUNNEL_ADDR_PORT 9028
 
 WORKDIR /usr/local/bin
 
-MAINTAINER Xiyan
 
 CMD ["/usr/local/bin/ngrokd", "-domain=\"adsf\"", "-httpAddr=\":asdfe\""]
