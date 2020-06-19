@@ -45,11 +45,15 @@ func main() {
 	var dockerfile = ""
 	dockerfile += "FROM ubuntu:18.04\n\n"
 	dockerfile += "LABEL maintainer=\"supertom495@gmail.com\"\n\n"
-	dockerfile += "COPY ./ngrok/bin/ngrokd /usr/local/bin\n\n"
+	dockerfile += "COPY ./ngrok/bin/ngrokd /usr/local/bin\n"
 	dockerfile += fmt.Sprintf("COPY ./certificate/%s /root/certificate\n\n", NGROK_DOMAIN)
-	dockerfile += fmt.Sprintf("EXPOSE %s\n\n", HTTP_PORT)
+	dockerfile += fmt.Sprintf("ENV NGROK_DOMAIN %s\n", NGROK_DOMAIN)
+	dockerfile += fmt.Sprintf("ENV HTTP_PORT %s\n", HTTP_PORT)
+	dockerfile += fmt.Sprintf("ENV TUNNEL_ADDR_PORT %s\n\n", TUNNEL_ADDR_PORT)
+	dockerfile += fmt.Sprintf("EXPOSE %s\n", HTTP_PORT)
 	dockerfile += fmt.Sprintf("EXPOSE %s\n\n", TUNNEL_ADDR_PORT)
-	dockerfile += fmt.Sprintf("CMD [\"/usr/local/bin/ngrokd\"]")
+	// dockerfile += fmt.Sprintf("CMD [\"/usr/local/bin/ngrokd\"]")
+	dockerfile += fmt.Sprintf("CMD [\"/bin/bash\"]")
 
 	err = ioutil.WriteFile("Dockerfile", []byte(dockerfile), 0755)
 	if err != nil {
