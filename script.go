@@ -9,9 +9,9 @@ import (
 	"os/exec"
 )
 
-const NGROK_DOMAIN = "www.google.com"
-const HTTP_PORT = "9035"
-const TUNNEL_ADDR_PORT = "9036"
+const NGROK_DOMAIN = "test.xiyantong.pw"
+const HTTP_PORT = "9025"
+const TUNNEL_ADDR_PORT = "9026"
 
 func main() {
 	fmt.Println(NGROK_DOMAIN, HTTP_PORT, TUNNEL_ADDR_PORT)
