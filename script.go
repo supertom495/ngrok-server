@@ -56,13 +56,16 @@ func genRootCA() {
 	arg2 := "rootCA.key"
 	arg3 := "2048"
 	cmd := exec.Command(app, arg0, arg1, arg2, arg3)
-	stdout, err := cmd.Output()
+	var out bytes.Buffer
+	var stderr bytes.Buffer
+	cmd.Stdout = &out
+	cmd.Stderr = &stderr
+	err := cmd.Run()
 	if err != nil {
-		log.Fatal(err)
-		fmt.Print("genRootCA")
+		fmt.Println(fmt.Sprint(err) + ": " + stderr.String())
 		return
 	}
-	fmt.Print(string(stdout))
+	fmt.Println("Result: " + out.String())
 }
 
 func genDevice() {
@@ -73,13 +76,16 @@ func genDevice() {
 	arg2 := "device.key"
 	arg3 := "2048"
 	cmd := exec.Command(app, arg0, arg1, arg2, arg3)
-	stdout, err := cmd.Output()
+	var out bytes.Buffer
+	var stderr bytes.Buffer
+	cmd.Stdout = &out
+	cmd.Stderr = &stderr
+	err := cmd.Run()
 	if err != nil {
-		log.Fatal(err)
-		fmt.Print("genDevice")
+		fmt.Println(fmt.Sprint(err) + ": " + stderr.String())
 		return
 	}
-	fmt.Print(string(stdout))
+	fmt.Println("Result: " + out.String())
 }
 
 func reqRootCA() {
@@ -124,13 +130,16 @@ func reqDevice() {
 	arg7 := "device.csr"
 
 	cmd := exec.Command(app, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-	stdout, err := cmd.Output()
+	var out bytes.Buffer
+	var stderr bytes.Buffer
+	cmd.Stdout = &out
+	cmd.Stderr = &stderr
+	err := cmd.Run()
 	if err != nil {
-		log.Fatal(err)
-		fmt.Print("reqDevice")
+		fmt.Println(fmt.Sprint(err) + ": " + stderr.String())
 		return
 	}
-	fmt.Print(string(stdout))
+	fmt.Println("Result: " + out.String())
 }
 
 func reqCrt() {
@@ -151,11 +160,14 @@ func reqCrt() {
 	arg12 := "5000"
 
 	cmd := exec.Command(app, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12)
-	stdout, err := cmd.Output()
+	var out bytes.Buffer
+	var stderr bytes.Buffer
+	cmd.Stdout = &out
+	cmd.Stderr = &stderr
+	err := cmd.Run()
 	if err != nil {
-		log.Fatal(err)
-		fmt.Print("reqCrt")
+		fmt.Println(fmt.Sprint(err) + ": " + stderr.String())
 		return
 	}
-	fmt.Print(string(stdout))
+	fmt.Println("Result: " + out.String())
 }
