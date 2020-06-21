@@ -19,14 +19,12 @@ RUN openssl genrsa -out rootCA.key 2048 && \
     openssl genrsa -out device.key 2048 && \
     openssl req -new -key device.key -subj /CN=$NGROK_DOMAIN -out device.csr && \
     openssl x509 -req -in device.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out device.crt -days 5000
-# COPY ./certificate/test.xiyantong.pw /root/certificate
 
 
+EXPOSE $HTTP_PORT
+EXPOSE $TUNNEL_ADDR_PORT
 
-EXPOSE 9025
-EXPOSE 9026
+# CMD ["-tlsKey=/root/ngrok/device.key", "-tlsCrt=/root/ngrok/device.crt", "-domain=\"test.xiyantong.pw\"", "-httpAddr=\":9025\"", "-httpsAddr=\":\"", "-tunnelAddr=\":9026\""] 
 
-# CMD ["-tlsKey=/root/certificate/device.key", "-tlsCrt=/root/certificate/device.crt", "-domain=\"test.xiyantong.pw\"", "-httpAddr=\":9025\"", "-httpsAddr=\":\"", "-tunnelAddr=\":9026\""] 
-
-# ENTRYPOINT ["/usr/local/bin/ngrokd"]
+# ENTRYPOINT ["/root/ngrok/ngrokd"]
 ENTRYPOINT ["/bin/bash"]
