@@ -25,16 +25,17 @@ EXPOSE $HTTP_PORT
 EXPOSE $TUNNEL_ADDR_PORT
 
 # CMD ["-tlsKey=/root/ngrok/device.key", "-tlsCrt=/root/ngrok/device.crt", "-domain=\"test.xiyantong.pw\"", "-httpAddr=\":9025\"", "-httpsAddr=\":\"", "-tunnelAddr=\":9026\""] 
-CMD [   "sh", "-c", \
-        "-tlsKey=/root/ngrok/device.key", \
-        "-tlsCrt=/root/ngrok/device.crt", \
-        "-domain=${NGROK_DOMAIN}", \
-        "-httpAddr=:${HTTP_PORT}", \
-        "-httpsAddr=:", \
-        "-tunnelAddr=:${TUNNEL_ADDR_PORT}" \
-    ] 
+# CMD [    \
+#         "-tlsKey=/root/ngrok/device.key", \
+#         "-tlsCrt=/root/ngrok/device.crt", \
+#         "-domain=${NGROK_DOMAIN}", \
+#         "-httpAddr=:${HTTP_PORT}", \
+#         "-httpsAddr=:", \
+#         "-tunnelAddr=:${TUNNEL_ADDR_PORT}" \
+#     ] 
 
 # CMD ["-tlsKey=/root/ngrok/device.key -tlsCrt=/root/ngrok/device.crt", "-domain=${NGROK_DOMAIN}", "-httpAddr=:${HTTP_PORT}", "-httpsAddr=: -tunnelAddr=:${TUNNEL_ADDR_PORT}"]
+CMD /root/ngrok/ngrokd -tlsKey=/root/ngrok/device.key -tlsCrt=/root/ngrok/device.crt -domain=$NGROK_DOMAIN -httpAddr=:$HTTP_PORT -httpsAddr=: -tunnelAddr=:$TUNNEL_ADDR_PORT
 
 ENTRYPOINT ["/root/ngrok/ngrokd"]
 # ENTRYPOINT ["/bin/bash"]
