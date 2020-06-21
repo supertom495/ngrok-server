@@ -25,7 +25,7 @@ EXPOSE $HTTP_PORT
 EXPOSE $TUNNEL_ADDR_PORT
 
 # CMD ["-tlsKey=/root/ngrok/device.key", "-tlsCrt=/root/ngrok/device.crt", "-domain=\"test.xiyantong.pw\"", "-httpAddr=\":9025\"", "-httpsAddr=\":\"", "-tunnelAddr=\":9026\""] 
-CMD [ \
+CMD [   "sh", "-c", \
         "-tlsKey=/root/ngrok/device.key", \
         "-tlsCrt=/root/ngrok/device.crt", \
         "-domain=${NGROK_DOMAIN}", \
