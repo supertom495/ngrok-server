@@ -28,11 +28,11 @@ EXPOSE $TUNNEL_ADDR_PORT
 CMD [ \
         "-tlsKey=/root/ngrok/device.key", \
         "-tlsCrt=/root/ngrok/device.crt", \
-        "-domain="$NGROK_DOMAIN"", \
-        "-httpAddr=":$HTTP_PORT"", \
-        "-httpsAddr=":"", \
-        "-tunnelAddr=":$TUNNEL_ADDR_PORT"" \
+        "-domain=\"${NGROK_DOMAIN}\"", \
+        "-httpAddr=\":${HTTP_PORT}\"", \
+        "-httpsAddr=\":\"", \
+        "-tunnelAddr=\":${TUNNEL_ADDR_PORT}\"" \
     ] 
 
-# ENTRYPOINT ["/root/ngrok/ngrokd"]
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/root/ngrok/ngrokd"]
+# ENTRYPOINT ["/bin/bash"]
