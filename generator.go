@@ -62,10 +62,11 @@ func main() {
 	}
 
 
-    var docker = ""
-    docker += fmt.Sprintf("docker build -t %s:latest .\n", NGROK_DOMAIN)
-	docker += fmt.Sprintf("docker run -t --name %s -p %s:%s -p %s:%s %s:latest\n", NGROK_DOMAIN, HTTP_PORT, HTTP_PORT, TUNNEL_ADDR_PORT, TUNNEL_ADDR_PORT, NGROK_DOMAIN)
-	err = ioutil.WriteFile("docker", []byte(docker), 0755)
+    var dockerCommand = ""
+    dockerCommand += fmt.Sprintf("docker build -t %s:latest .\n", NGROK_DOMAIN)
+	dockerCommand += fmt.Sprintf("docker run -t --name %s -p %s:%s -p %s:%s %s:latest\n", NGROK_DOMAIN, HTTP_PORT, HTTP_PORT, TUNNEL_ADDR_PORT, TUNNEL_ADDR_PORT, NGROK_DOMAIN)
+	dockerCommand += fmt.Sprintf("%s:%s\n", NGROK_DOMAIN, TUNNEL_ADDR_PORT)
+	err = ioutil.WriteFile("dockerCommand", []byte(dockerCommand), 0755)
 	if err != nil {
 		fmt.Printf("Unable to write file: %v", err)
 	}
