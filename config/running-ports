@@ -64,3 +64,7 @@ dolarshopsydney.api.redpayments.com.au
 dockertest1.xiyantong.pw
 	http:		9037
 	tunnelAddr:	9038
+
+test.api.xiyantong.pw
+	http:		6000
+	tunnelAddr:	6001

@@ -2,9 +2,9 @@ FROM ubuntu:18.04
 
 LABEL maintainer="supertom495@gmail.com"
 
-ENV NGROK_DOMAIN dockertest1.xiyantong.pw
-ENV HTTP_PORT 9037
-ENV TUNNEL_ADDR_PORT 9038
+ENV NGROK_DOMAIN test.api.xiyantong.pw
+ENV HTTP_PORT 6000
+ENV TUNNEL_ADDR_PORT 6001
 
 RUN apt-get update && \
     apt-get install openssl -y
@@ -24,18 +24,6 @@ RUN openssl genrsa -out rootCA.key 2048 && \
 EXPOSE $HTTP_PORT
 EXPOSE $TUNNEL_ADDR_PORT
 
-# CMD ["-tlsKey=/root/ngrok/device.key", "-tlsCrt=/root/ngrok/device.crt", "-domain=\"test.xiyantong.pw\"", "-httpAddr=\":9025\"", "-httpsAddr=\":\"", "-tunnelAddr=\":9026\""] 
-# CMD [    \
-#         "-tlsKey=/root/ngrok/device.key", \
-#         "-tlsCrt=/root/ngrok/device.crt", \
-#         "-domain=${NGROK_DOMAIN}", \
-#         "-httpAddr=:${HTTP_PORT}", \
-#         "-httpsAddr=:", \
-#         "-tunnelAddr=:${TUNNEL_ADDR_PORT}" \
-#     ] 
 
-# CMD ["-tlsKey=/root/ngrok/device.key -tlsCrt=/root/ngrok/device.crt", "-domain=${NGROK_DOMAIN}", "-httpAddr=:${HTTP_PORT}", "-httpsAddr=: -tunnelAddr=:${TUNNEL_ADDR_PORT}"]
 CMD /root/ngrok/ngrokd -tlsKey=/root/ngrok/device.key -tlsCrt=/root/ngrok/device.crt -domain=$NGROK_DOMAIN -httpAddr=:$HTTP_PORT -httpsAddr=: -tunnelAddr=:$TUNNEL_ADDR_PORT
 
-# ENTRYPOINT "/root/ngrok/ngrokd"
-# ENTRYPOINT ["echo"]
