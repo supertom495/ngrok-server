@@ -68,3 +68,7 @@ dockertest1.xiyantong.pw
 test.api.xiyantong.pw
 	http:		6000
 	tunnelAddr:	6001
+
+thinkcentre.api.xiyantong.pw
+	http:		6002
+	tunnelAddr:	6003

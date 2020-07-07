@@ -2,9 +2,9 @@ FROM ubuntu:18.04
 
 LABEL maintainer="supertom495@gmail.com"
 
-ENV NGROK_DOMAIN test.api.xiyantong.pw
-ENV HTTP_PORT 6000
-ENV TUNNEL_ADDR_PORT 6001
+ENV NGROK_DOMAIN thinkcentre.api.xiyantong.pw
+ENV HTTP_PORT 6002
+ENV TUNNEL_ADDR_PORT 6003
 
 RUN apt-get update && \
     apt-get install openssl -y

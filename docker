@@ -1,0 +1,2 @@
+docker build -t thinkcentre.api.xiyantong.pw:latest .
+docker run -t --name thinkcentre.api.xiyantong.pw -p 6002:6002 -p 6003:6003 thinkcentre.api.xiyantong.pw:latest
