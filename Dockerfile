@@ -2,9 +2,9 @@ FROM ubuntu:18.04
 
 LABEL maintainer="supertom495@gmail.com"
 
-ENV NGROK_DOMAIN test.xiyantong.pw
-ENV HTTP_PORT 9025
-ENV TUNNEL_ADDR_PORT 9026
+ENV NGROK_DOMAIN dockertest1.xiyantong.pw
+ENV HTTP_PORT 9037
+ENV TUNNEL_ADDR_PORT 9038
 
 RUN apt-get update && \
     apt-get install openssl -y
