@@ -72,3 +72,7 @@ test.api.xiyantong.pw
 thinkcentre.api.xiyantong.pw
 	http:		6002
 	tunnelAddr:	6003
+
+beefnoodle.api.xiyantong.pw
+	http:		9039
+	tunnelAddr:	9040

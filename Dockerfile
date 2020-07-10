@@ -2,9 +2,9 @@ FROM ubuntu:18.04
 
 LABEL maintainer="supertom495@gmail.com"
 
-ENV NGROK_DOMAIN thinkcentre.api.xiyantong.pw
-ENV HTTP_PORT 6002
-ENV TUNNEL_ADDR_PORT 6003
+ENV NGROK_DOMAIN beefnoodle.api.xiyantong.pw
+ENV HTTP_PORT 9039
+ENV TUNNEL_ADDR_PORT 9040
 
 RUN apt-get update && \
     apt-get install openssl -y

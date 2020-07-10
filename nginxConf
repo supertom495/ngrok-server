@@ -1,8 +1,8 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     thinkcentre.api.xiyantong.pw www.thinkcentre.api.xiyantong.pw;
+        server_name     beefnoodle.api.xiyantong.pw www.beefnoodle.api.xiyantong.pw;
         location / {
-                proxy_pass http://www.thinkcentre.api.xiyantong.pw:6002; 
+                proxy_pass http://www.beefnoodle.api.xiyantong.pw:9039; 
         }    
 }    

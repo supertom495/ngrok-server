@@ -1,3 +1,3 @@
-docker build -t thinkcentre.api.xiyantong.pw:latest .
-docker run -t --name thinkcentre.api.xiyantong.pw -p 6002:6002 -p 6003:6003 thinkcentre.api.xiyantong.pw:latest
-thinkcentre.api.xiyantong.pw:6003
+docker build -t beefnoodle.api.xiyantong.pw:latest .
+docker run -t --name beefnoodle.api.xiyantong.pw -p 9039:9039 -p 9040:9040 beefnoodle.api.xiyantong.pw:latest
+beefnoodle.api.xiyantong.pw:9040
