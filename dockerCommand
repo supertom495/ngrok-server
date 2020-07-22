@@ -1,3 +1,0 @@
-docker build -t xiaochuanyue.api.redpayments.com.au:latest .
-docker run -t --name xiaochuanyue.api.redpayments.com.au -p 9041:9041 -p 9042:9042 xiaochuanyue.api.redpayments.com.au:latest
-xiaochuanyue.api.redpayments.com.au:9042

@@ -74,6 +74,10 @@ beefnoodle.api.xiyantong.pw
 	http:		9039
 	tunnelAddr:	9040
 
-beefnoodle.api.xiyantong.pw
+xiaochuanyue.api.redpayments.com.au
 	http:		9041
 	tunnelAddr:	9042
+
+spicyworld.api.redpayments.com.au
+	http:		9043
+	tunnelAddr:	9044

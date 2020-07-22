@@ -1,8 +1,0 @@
-server {
-        listen          80;
-        listen          [::]:80;
-        server_name     xiaochuanyue.api.redpayments.com.au www.xiaochuanyue.api.redpayments.com.au;
-        location / {
-                proxy_pass http://www.xiaochuanyue.api.redpayments.com.au:9041; 
-        }    
-}    
