@@ -1,3 +1,3 @@
-docker build -t beefnoodle.api.xiyantong.pw:latest .
-docker run -t --name beefnoodle.api.xiyantong.pw -p 9039:9039 -p 9040:9040 beefnoodle.api.xiyantong.pw:latest
-beefnoodle.api.xiyantong.pw:9040
+docker build -t xiaochuanyue.api.redpayments.com.au:latest .
+docker run -t --name xiaochuanyue.api.redpayments.com.au -p 9041:9041 -p 9042:9042 xiaochuanyue.api.redpayments.com.au:latest
+xiaochuanyue.api.redpayments.com.au:9042

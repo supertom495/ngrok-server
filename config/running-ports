@@ -67,12 +67,13 @@ dockertest1.xiyantong.pw
 
 test.api.xiyantong.pw
 	http:		6000
-	tunnelAddr:	6001
-
-thinkcentre.api.xiyantong.pw
-	http:		6002
-	tunnelAddr:	6003
+	https:		6001
+	tunnelAddr:	6002
 
 beefnoodle.api.xiyantong.pw
 	http:		9039
 	tunnelAddr:	9040
+
+beefnoodle.api.xiyantong.pw
+	http:		9041
+	tunnelAddr:	9042
