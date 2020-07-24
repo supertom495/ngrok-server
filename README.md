@@ -31,7 +31,12 @@ storing certificates
 
 ## Usage
 
-1. update the value in Dockerfile ![Capture](./images/Capture.PNG)
+1. update the value in Dockerfile 
+```
+ENV NGROK_DOMAIN spicyworld.api.redpayments.com.au
+ENV HTTP_PORT 9043
+ENV TUNNEL_ADDR_PORT 9044
+```
 
 2. append running-ports
 
