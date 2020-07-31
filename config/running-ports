@@ -81,3 +81,9 @@ xiaochuanyue.api.redpayments.com.au
 spicyworld.api.redpayments.com.au
 	http:		9043
 	tunnelAddr:	9044
+
+jackpothotpot.api.redpayments.com.au
+	http:		9045
+	tunnelAddr: 9046
+
+	

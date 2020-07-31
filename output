@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     spicyworld.api.redpayments.com.au www.spicyworld.api.redpayments.com.au;
+        server_name     jackpothotpot.api.redpayments.com.au www.jackpothotpot.api.redpayments.com.au;
         location / {
-                proxy_pass http://www.spicyworld.api.redpayments.com.au:9043; 
+                proxy_pass http://www.jackpothotpot.api.redpayments.com.au:9045; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t spicyworld.api.redpayments.com.au:latest .
+docker build -t jackpothotpot.api.redpayments.com.au:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name spicyworld.api.redpayments.com.au -p 9043:9043 -p 9044:9044 spicyworld.api.redpayments.com.au:latest
+docker run -t --name jackpothotpot.api.redpayments.com.au -p 9045:9045 -p 9046:9046 jackpothotpot.api.redpayments.com.au:latest
 
 ---------------------------------------------------------------------------------------
 
-spicyworld.api.redpayments.com.au:9044
+jackpothotpot.api.redpayments.com.au:9046
