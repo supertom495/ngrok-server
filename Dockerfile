@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 LABEL maintainer="supertom495@gmail.com"
 
-ENV NGROK_DOMAIN lilongchatswood-api.redpayments.com.au
+ENV NGROK_DOMAIN lilongchatswood.api.redpayments.com.au
 ENV HTTP_PORT 9047
 ENV TUNNEL_ADDR_PORT 9048
 
