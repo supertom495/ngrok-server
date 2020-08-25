@@ -89,3 +89,7 @@ jackpothotpot.api.redpayments.com.au
 lilongchatswood.api.redpayments.com.au
 	http:		9047
 	tunnelAddr: 9048
+
+goodluckhotpot.api.redpayments.com.au
+	http:		9049
+	tunnelAddr: 9050

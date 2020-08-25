@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     lilongchatswood.api.redpayments.com.au www.lilongchatswood.api.redpayments.com.au;
+        server_name     goodluckhotpot.api.redpayments.com.au www.goodluckhotpot.api.redpayments.com.au;
         location / {
-                proxy_pass http://www.lilongchatswood.api.redpayments.com.au:9047; 
+                proxy_pass http://www.goodluckhotpot.api.redpayments.com.au:9049; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t lilongchatswood.api.redpayments.com.au:latest .
+docker build -t goodluckhotpot.api.redpayments.com.au:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name lilongchatswood.api.redpayments.com.au -p 9047:9047 -p 9048:9048 lilongchatswood.api.redpayments.com.au:latest
+docker run -t --name goodluckhotpot.api.redpayments.com.au -p 9049:9049 -p 9050:9050 goodluckhotpot.api.redpayments.com.au:latest
 
 ---------------------------------------------------------------------------------------
 
-lilongchatswood.api.redpayments.com.au:9048
+goodluckhotpot.api.redpayments.com.au:9050
