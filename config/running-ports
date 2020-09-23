@@ -93,3 +93,7 @@ lilongchatswood.api.redpayments.com.au
 goodluckhotpot.api.redpayments.com.au
 	http:		9049
 	tunnelAddr: 9050
+
+warmingricenoodle.api.redpayments.com.au
+	http:		9051
+	tunnelAddr: 9052
