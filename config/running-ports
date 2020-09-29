@@ -97,3 +97,7 @@ goodluckhotpot.api.redpayments.com.au
 warmingricenoodle.api.redpayments.com.au
 	http:		9051
 	tunnelAddr: 9052
+
+zhongyi.api.redpayments.com.au
+	http:		9053
+	tunnelAddr: 9054

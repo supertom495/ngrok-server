@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     warmingricenoodle.api.redpayments.com.au www.warmingricenoodle.api.redpayments.com.au;
+        server_name     zhongyi.api.redpayments.com.au www.zhongyi.api.redpayments.com.au;
         location / {
-                proxy_pass http://www.warmingricenoodle.api.redpayments.com.au:9051; 
+                proxy_pass http://www.zhongyi.api.redpayments.com.au:9053; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t warmingricenoodle.api.redpayments.com.au:latest .
+docker build -t zhongyi.api.redpayments.com.au:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name warmingricenoodle.api.redpayments.com.au -p 9051:9051 -p 9052:9052 warmingricenoodle.api.redpayments.com.au:latest
+docker run -t --name zhongyi.api.redpayments.com.au -p 9053:9053 -p 9054:9054 zhongyi.api.redpayments.com.au:latest
 
 ---------------------------------------------------------------------------------------
 
-warmingricenoodle.api.redpayments.com.au:9052
+zhongyi.api.redpayments.com.au:9054
