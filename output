@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     zhongyi.api.redpayments.com.au www.zhongyi.api.redpayments.com.au;
+        server_name     buffet88ashfield.api.redpayments.com.au www.buffet88ashfield.api.redpayments.com.au;
         location / {
-                proxy_pass http://www.zhongyi.api.redpayments.com.au:9053; 
+                proxy_pass http://www.buffet88ashfield.api.redpayments.com.au:9055; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t zhongyi.api.redpayments.com.au:latest .
+docker build -t buffet88ashfield.api.redpayments.com.au:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name zhongyi.api.redpayments.com.au -p 9053:9053 -p 9054:9054 zhongyi.api.redpayments.com.au:latest
+docker run -t --name buffet88ashfield.api.redpayments.com.au -p 9055:9055 -p 9056:9056 buffet88ashfield.api.redpayments.com.au:latest
 
 ---------------------------------------------------------------------------------------
 
-zhongyi.api.redpayments.com.au:9054
+buffet88ashfield.api.redpayments.com.au:9056

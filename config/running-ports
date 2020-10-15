@@ -101,3 +101,7 @@ warmingricenoodle.api.redpayments.com.au
 zhongyi.api.redpayments.com.au
 	http:		9053
 	tunnelAddr: 9054
+
+buffet88ashfield.api.redpayments.com.au
+	http:		9055
+	tunnelAddr: 9056
