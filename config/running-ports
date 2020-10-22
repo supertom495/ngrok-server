@@ -105,3 +105,7 @@ zhongyi.api.redpayments.com.au
 buffet88ashfield.api.redpayments.com.au
 	http:		9055
 	tunnelAddr: 9056
+
+nanjingwaterloo.api.redpayments.com.au
+	http:		9057
+	tunnelAddr: 9058
