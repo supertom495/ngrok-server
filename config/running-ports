@@ -109,3 +109,7 @@ buffet88ashfield.api.redpayments.com.au
 nanjingwaterloo.api.redpayments.com.au
 	http:		9057
 	tunnelAddr: 9058
+
+kgalaxy-burwood.api.redpayments.com.au
+	http:		9059
+	tunnelAddr: 9060

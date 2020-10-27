@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     nanjingwaterloo.api.redpayments.com.au www.nanjingwaterloo.api.redpayments.com.au;
+        server_name     kgalaxy-burwood.api.redpayments.com.au www.kgalaxy-burwood.api.redpayments.com.au;
         location / {
-                proxy_pass http://www.nanjingwaterloo.api.redpayments.com.au:9057; 
+                proxy_pass http://www.kgalaxy-burwood.api.redpayments.com.au:9059; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t nanjingwaterloo.api.redpayments.com.au:latest .
+docker build -t kgalaxy-burwood.api.redpayments.com.au:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name nanjingwaterloo.api.redpayments.com.au -p 9057:9057 -p 9058:9058 nanjingwaterloo.api.redpayments.com.au:latest
+docker run -t --name kgalaxy-burwood.api.redpayments.com.au -p 9059:9059 -p 9060:9060 kgalaxy-burwood.api.redpayments.com.au:latest
 
 ---------------------------------------------------------------------------------------
 
-nanjingwaterloo.api.redpayments.com.au:9058
+kgalaxy-burwood.api.redpayments.com.au:9060
