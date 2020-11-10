@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     hotpotpalace.api.redpayments.com.au www.hotpotpalace.api.redpayments.com.au;
+        server_name     api.xiyantong.pw www.api.xiyantong.pw;
         location / {
-                proxy_pass http://www.hotpotpalace.api.redpayments.com.au:9029; 
+                proxy_pass http://www.api.xiyantong.pw:9014; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t hotpotpalace.api.redpayments.com.au:latest .
+docker build -t api.xiyantong.pw:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name hotpotpalace.api.redpayments.com.au -p 9029:9029 -p 9030:9030 hotpotpalace.api.redpayments.com.au:latest
+docker run -t --name api.xiyantong.pw -p 9014:9014 -p 9015:9015 api.xiyantong.pw:latest
 
 ---------------------------------------------------------------------------------------
 
-hotpotpalace.api.redpayments.com.au:9030
+api.xiyantong.pw:9015
