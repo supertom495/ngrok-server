@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     kgalaxy-burwood.api.redpayments.com.au www.kgalaxy-burwood.api.redpayments.com.au;
+        server_name     hotpotpalace.api.redpayments.com.au www.hotpotpalace.api.redpayments.com.au;
         location / {
-                proxy_pass http://www.kgalaxy-burwood.api.redpayments.com.au:9059; 
+                proxy_pass http://www.hotpotpalace.api.redpayments.com.au:9029; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t kgalaxy-burwood.api.redpayments.com.au:latest .
+docker build -t hotpotpalace.api.redpayments.com.au:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name kgalaxy-burwood.api.redpayments.com.au -p 9059:9059 -p 9060:9060 kgalaxy-burwood.api.redpayments.com.au:latest
+docker run -t --name hotpotpalace.api.redpayments.com.au -p 9029:9029 -p 9030:9030 hotpotpalace.api.redpayments.com.au:latest
 
 ---------------------------------------------------------------------------------------
 
-kgalaxy-burwood.api.redpayments.com.au:9060
+hotpotpalace.api.redpayments.com.au:9030

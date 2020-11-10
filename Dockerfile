@@ -2,9 +2,9 @@ FROM ubuntu:18.04
 
 LABEL maintainer="supertom495@gmail.com"
 
-ENV NGROK_DOMAIN kgalaxy-burwood.api.redpayments.com.au
-ENV HTTP_PORT 9059
-ENV TUNNEL_ADDR_PORT 9060
+ENV NGROK_DOMAIN hotpotpalace.api.redpayments.com.au
+ENV HTTP_PORT 9029
+ENV TUNNEL_ADDR_PORT 9030
 
 RUN apt-get update && \
     apt-get install openssl -y
