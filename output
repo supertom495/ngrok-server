@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     office.xiyantong.pw www.office.xiyantong.pw;
+        server_name     jiaojiaoxiaoyu.api.redpayments.com.au www.jiaojiaoxiaoyu.api.redpayments.com.au;
         location / {
-                proxy_pass http://www.office.xiyantong.pw:9016; 
+                proxy_pass http://www.jiaojiaoxiaoyu.api.redpayments.com.au:9033; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t office.xiyantong.pw:latest .
+docker build -t jiaojiaoxiaoyu.api.redpayments.com.au:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name office.xiyantong.pw -p 9016:9016 -p 9017:9017 office.xiyantong.pw:latest
+docker run -t --name jiaojiaoxiaoyu.api.redpayments.com.au -p 9033:9033 -p 9034:9034 jiaojiaoxiaoyu.api.redpayments.com.au:latest
 
 ---------------------------------------------------------------------------------------
 
-office.xiyantong.pw:9017
+jiaojiaoxiaoyu.api.redpayments.com.au:9034
