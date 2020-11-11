@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     hkyuebaby.api.redpayments.com.au www.hkyuebaby.api.redpayments.com.au;
+        server_name     office.xiyantong.pw www.office.xiyantong.pw;
         location / {
-                proxy_pass http://www.hkyuebaby.api.redpayments.com.au:9031; 
+                proxy_pass http://www.office.xiyantong.pw:9016; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t hkyuebaby.api.redpayments.com.au:latest .
+docker build -t office.xiyantong.pw:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name hkyuebaby.api.redpayments.com.au -p 9031:9031 -p 9032:9032 hkyuebaby.api.redpayments.com.au:latest
+docker run -t --name office.xiyantong.pw -p 9016:9016 -p 9017:9017 office.xiyantong.pw:latest
 
 ---------------------------------------------------------------------------------------
 
-hkyuebaby.api.redpayments.com.au:9032
+office.xiyantong.pw:9017
