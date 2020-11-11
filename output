@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     smilingdumplings.api.redpayments.com.au www.smilingdumplings.api.redpayments.com.au;
+        server_name     hkyuebaby.api.redpayments.com.au www.hkyuebaby.api.redpayments.com.au;
         location / {
-                proxy_pass http://www.smilingdumplings.api.redpayments.com.au:9061; 
+                proxy_pass http://www.hkyuebaby.api.redpayments.com.au:9031; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t smilingdumplings.api.redpayments.com.au:latest .
+docker build -t hkyuebaby.api.redpayments.com.au:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name smilingdumplings.api.redpayments.com.au -p 9061:9061 -p 9062:9062 smilingdumplings.api.redpayments.com.au:latest
+docker run -t --name hkyuebaby.api.redpayments.com.au -p 9031:9031 -p 9032:9032 hkyuebaby.api.redpayments.com.au:latest
 
 ---------------------------------------------------------------------------------------
 
-smilingdumplings.api.redpayments.com.au:9062
+hkyuebaby.api.redpayments.com.au:9032
