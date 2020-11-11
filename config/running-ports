@@ -113,3 +113,7 @@ nanjingwaterloo.api.redpayments.com.au
 kgalaxy-burwood.api.redpayments.com.au
 	http:		9059
 	tunnelAddr: 9060
+
+smilingdumplings.api.redpayments.com.au
+	http:		9061
+	tunnelAddr: 9062
