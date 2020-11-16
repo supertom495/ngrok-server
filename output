@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     jiaojiaoxiaoyu.api.redpayments.com.au www.jiaojiaoxiaoyu.api.redpayments.com.au;
+        server_name     zhuangyuanwonton.api.redpayments.com.au www.zhuangyuanwonton.api.redpayments.com.au;
         location / {
-                proxy_pass http://www.jiaojiaoxiaoyu.api.redpayments.com.au:9033; 
+                proxy_pass http://www.zhuangyuanwonton.api.redpayments.com.au:9063; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t jiaojiaoxiaoyu.api.redpayments.com.au:latest .
+docker build -t zhuangyuanwonton.api.redpayments.com.au:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name jiaojiaoxiaoyu.api.redpayments.com.au -p 9033:9033 -p 9034:9034 jiaojiaoxiaoyu.api.redpayments.com.au:latest
+docker run -t --name zhuangyuanwonton.api.redpayments.com.au -p 9063:9063 -p 9064:9064 zhuangyuanwonton.api.redpayments.com.au:latest
 
 ---------------------------------------------------------------------------------------
 
-jiaojiaoxiaoyu.api.redpayments.com.au:9034
+zhuangyuanwonton.api.redpayments.com.au:9064

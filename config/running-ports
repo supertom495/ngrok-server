@@ -117,3 +117,8 @@ kgalaxy-burwood.api.redpayments.com.au
 smilingdumplings.api.redpayments.com.au
 	http:		9061
 	tunnelAddr: 9062
+
+zhuangyuanwonton.api.redpayments.com.au
+	http:		9063
+	tunnelAddr: 9064
+	
