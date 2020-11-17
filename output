@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     zhuangyuanwonton.api.redpayments.com.au www.zhuangyuanwonton.api.redpayments.com.au;
+        server_name     mtoffice.xiyantong.pw www.mtoffice.xiyantong.pw;
         location / {
-                proxy_pass http://www.zhuangyuanwonton.api.redpayments.com.au:9063; 
+                proxy_pass http://www.mtoffice.xiyantong.pw:9018; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t zhuangyuanwonton.api.redpayments.com.au:latest .
+docker build -t mtoffice.xiyantong.pw:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name zhuangyuanwonton.api.redpayments.com.au -p 9063:9063 -p 9064:9064 zhuangyuanwonton.api.redpayments.com.au:latest
+docker run -t --name mtoffice.xiyantong.pw -p 9018:9018 -p 9019:9019 mtoffice.xiyantong.pw:latest
 
 ---------------------------------------------------------------------------------------
 
-zhuangyuanwonton.api.redpayments.com.au:9064
+mtoffice.xiyantong.pw:9019
