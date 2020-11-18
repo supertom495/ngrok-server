@@ -121,4 +121,7 @@ smilingdumplings.api.redpayments.com.au
 zhuangyuanwonton.api.redpayments.com.au
 	http:		9063
 	tunnelAddr: 9064
-	
+
+takasushi.api.redpayments.com.au
+	http:		9065
+	tunnelAddr: 9066
