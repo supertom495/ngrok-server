@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     takasushi.api.redpayments.com.au www.takasushi.api.redpayments.com.au;
+        server_name     xiaochuanyue.api.redpayments.com.au www.xiaochuanyue.api.redpayments.com.au;
         location / {
-                proxy_pass http://www.takasushi.api.redpayments.com.au:9065; 
+                proxy_pass http://www.xiaochuanyue.api.redpayments.com.au:9041; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t takasushi.api.redpayments.com.au:latest .
+docker build -t xiaochuanyue.api.redpayments.com.au:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name takasushi.api.redpayments.com.au -p 9065:9065 -p 9066:9066 takasushi.api.redpayments.com.au:latest
+docker run -t --name xiaochuanyue.api.redpayments.com.au -p 9041:9041 -p 9042:9042 xiaochuanyue.api.redpayments.com.au:latest
 
 ---------------------------------------------------------------------------------------
 
-takasushi.api.redpayments.com.au:9066
+xiaochuanyue.api.redpayments.com.au:9042
