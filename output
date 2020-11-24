@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     xiaochuanyue.api.redpayments.com.au www.xiaochuanyue.api.redpayments.com.au;
+        server_name     longfengsuancaiyu.api.redpayments.com.au www.longfengsuancaiyu.api.redpayments.com.au;
         location / {
-                proxy_pass http://www.xiaochuanyue.api.redpayments.com.au:9041; 
+                proxy_pass http://www.longfengsuancaiyu.api.redpayments.com.au:9067; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t xiaochuanyue.api.redpayments.com.au:latest .
+docker build -t longfengsuancaiyu.api.redpayments.com.au:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name xiaochuanyue.api.redpayments.com.au -p 9041:9041 -p 9042:9042 xiaochuanyue.api.redpayments.com.au:latest
+docker run -t --name longfengsuancaiyu.api.redpayments.com.au -p 9067:9067 -p 9068:9068 longfengsuancaiyu.api.redpayments.com.au:latest
 
 ---------------------------------------------------------------------------------------
 
-xiaochuanyue.api.redpayments.com.au:9042
+longfengsuancaiyu.api.redpayments.com.au:9068

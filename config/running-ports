@@ -125,3 +125,7 @@ zhuangyuanwonton.api.redpayments.com.au
 takasushi.api.redpayments.com.au
 	http:		9065
 	tunnelAddr: 9066
+
+longfengsuancaiyu.api.redpayments.com.au
+	http:		9067
+	tunnelAddr: 9068
