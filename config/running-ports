@@ -129,3 +129,7 @@ takasushi.api.redpayments.com.au
 longfengsuancaiyu.api.redpayments.com.au
 	http:		9067
 	tunnelAddr: 9068
+
+dumplingco.api.redpayments.com.au
+	http:		9069
+	tunnelAddr: 9070

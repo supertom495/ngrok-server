@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     longfengsuancaiyu.api.redpayments.com.au www.longfengsuancaiyu.api.redpayments.com.au;
+        server_name     dumplingco.api.redpayments.com.au www.dumplingco.api.redpayments.com.au;
         location / {
-                proxy_pass http://www.longfengsuancaiyu.api.redpayments.com.au:9067; 
+                proxy_pass http://www.dumplingco.api.redpayments.com.au:9069; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t longfengsuancaiyu.api.redpayments.com.au:latest .
+docker build -t dumplingco.api.redpayments.com.au:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name longfengsuancaiyu.api.redpayments.com.au -p 9067:9067 -p 9068:9068 longfengsuancaiyu.api.redpayments.com.au:latest
+docker run -t --name dumplingco.api.redpayments.com.au -p 9069:9069 -p 9070:9070 dumplingco.api.redpayments.com.au:latest
 
 ---------------------------------------------------------------------------------------
 
-longfengsuancaiyu.api.redpayments.com.au:9068
+dumplingco.api.redpayments.com.au:9070
