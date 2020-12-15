@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     dumplingco.api.redpayments.com.au www.dumplingco.api.redpayments.com.au;
+        server_name     chuanchuanhotpot.api.redpayments.com.au www.chuanchuanhotpot.api.redpayments.com.au;
         location / {
-                proxy_pass http://www.dumplingco.api.redpayments.com.au:9069; 
+                proxy_pass http://www.chuanchuanhotpot.api.redpayments.com.au:9071; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t dumplingco.api.redpayments.com.au:latest .
+docker build -t chuanchuanhotpot.api.redpayments.com.au:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name dumplingco.api.redpayments.com.au -p 9069:9069 -p 9070:9070 dumplingco.api.redpayments.com.au:latest
+docker run -t --name chuanchuanhotpot.api.redpayments.com.au -p 9071:9071 -p 9072:9072 chuanchuanhotpot.api.redpayments.com.au:latest
 
 ---------------------------------------------------------------------------------------
 
-dumplingco.api.redpayments.com.au:9070
+chuanchuanhotpot.api.redpayments.com.au:9072

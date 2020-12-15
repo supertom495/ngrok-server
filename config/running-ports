@@ -133,3 +133,7 @@ longfengsuancaiyu.api.redpayments.com.au
 dumplingco.api.redpayments.com.au
 	http:		9069
 	tunnelAddr: 9070
+
+chuanchuanhotpot.api.redpayments.com.au
+	http:		9071
+	tunnelAddr: 9072
