@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     chuanchuanhotpot.api.redpayments.com.au www.chuanchuanhotpot.api.redpayments.com.au;
+        server_name     nanjingburwood.api.redpayments.com.au www.nanjingburwood.api.redpayments.com.au;
         location / {
-                proxy_pass http://www.chuanchuanhotpot.api.redpayments.com.au:9071; 
+                proxy_pass http://www.nanjingburwood.api.redpayments.com.au:9073; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t chuanchuanhotpot.api.redpayments.com.au:latest .
+docker build -t nanjingburwood.api.redpayments.com.au:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name chuanchuanhotpot.api.redpayments.com.au -p 9071:9071 -p 9072:9072 chuanchuanhotpot.api.redpayments.com.au:latest
+docker run -t --name nanjingburwood.api.redpayments.com.au -p 9073:9073 -p 9074:9074 nanjingburwood.api.redpayments.com.au:latest
 
 ---------------------------------------------------------------------------------------
 
-chuanchuanhotpot.api.redpayments.com.au:9072
+nanjingburwood.api.redpayments.com.au:9074

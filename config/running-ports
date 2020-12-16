@@ -137,3 +137,7 @@ dumplingco.api.redpayments.com.au
 chuanchuanhotpot.api.redpayments.com.au
 	http:		9071
 	tunnelAddr: 9072
+
+nanjingburwood.api.redpayments.com.au
+	http:		9073
+	tunnelAddr: 9074
