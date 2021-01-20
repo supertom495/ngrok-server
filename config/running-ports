@@ -141,3 +141,7 @@ chuanchuanhotpot.api.redpayments.com.au
 nanjingburwood.api.redpayments.com.au
 	http:		9073
 	tunnelAddr: 9074
+
+sevento.api.redpayments.com.au
+	http:		9075
+	tunnelAddr: 9076
