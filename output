@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     sevento.api.redpayments.com.au www.sevento.api.redpayments.com.au;
+        server_name     baodaotaiwanesekitchen.api.redpayments.com.au www.baodaotaiwanesekitchen.api.redpayments.com.au;
         location / {
-                proxy_pass http://www.sevento.api.redpayments.com.au:9075; 
+                proxy_pass http://www.baodaotaiwanesekitchen.api.redpayments.com.au:9077; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t sevento.api.redpayments.com.au:latest .
+docker build -t baodaotaiwanesekitchen.api.redpayments.com.au:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name sevento.api.redpayments.com.au -p 9075:9075 -p 9076:9076 sevento.api.redpayments.com.au:latest
+docker run -t --name baodaotaiwanesekitchen.api.redpayments.com.au -p 9077:9077 -p 9078:9078 baodaotaiwanesekitchen.api.redpayments.com.au:latest
 
 ---------------------------------------------------------------------------------------
 
-sevento.api.redpayments.com.au:9076
+baodaotaiwanesekitchen.api.redpayments.com.au:9078
