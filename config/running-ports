@@ -149,3 +149,7 @@ sevento.api.redpayments.com.au
 baodaotwkitchen.api.redpayments.com.au
 	http:		9077
 	tunnelAddr: 9078
+
+taorestuarant.api.redpayments.com.au
+	http:		9079
+	tunnelAddr: 9080

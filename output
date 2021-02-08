@@ -2,21 +2,21 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     baodaotwkitchen.api.redpayments.com.au www.baodaotwkitchen.api.redpayments.com.au;
+        server_name     taorestuarant.api.redpayments.com.au www.taorestuarant.api.redpayments.com.au;
         location / {
-                proxy_pass http://www.baodaotwkitchen.api.redpayments.com.au:9077; 
+                proxy_pass http://www.taorestuarant.api.redpayments.com.au:9079; 
         }    
 }    
 
 
 ---------------------------------------------------------------------------------------
 
-docker build -t baodaotwkitchen.api.redpayments.com.au:latest .
+docker build -t taorestuarant.api.redpayments.com.au:latest .
 
 ---------------------------------------------------------------------------------------
 
-docker run -t --name baodaotwkitchen.api.redpayments.com.au -p 9077:9077 -p 9078:9078 baodaotwkitchen.api.redpayments.com.au:latest
+docker run -t --name taorestuarant.api.redpayments.com.au -p 9079:9079 -p 9080:9080 taorestuarant.api.redpayments.com.au:latest
 
 ---------------------------------------------------------------------------------------
 
-baodaotwkitchen.api.redpayments.com.au:9078
+taorestuarant.api.redpayments.com.au:9080
